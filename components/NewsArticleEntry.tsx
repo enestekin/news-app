@@ -9,8 +9,6 @@ interface NewsArticleEntryProps {
 const NewsArticleEntry: React.FC<NewsArticleEntryProps> = ({
   article: { title, description, url, urlToImage },
 }) => {
-  console.log(urlToImage);
-
   const validImageUrl =
     urlToImage?.startsWith("http://") || urlToImage?.startsWith("https://")
       ? urlToImage
