@@ -3,7 +3,7 @@ import "@/styles/globals.css";
 import { Inter } from "next/font/google";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { Container } from "react-bootstrap";
+import { Container, SSRProvider } from "react-bootstrap";
 import styles from "@/styles/App.module.css";
 import NavBar from "@/components/Navbar";
 import NextNProgress from "nextjs-progressbar";
@@ -25,9 +25,11 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <NextNProgress />
       <NavBar />
-      <Container className={styles.pageContainer}>
-        <Component {...pageProps} />
-      </Container>
+      <SSRProvider>
+        <Container className={styles.pageContainer}>
+          <Component {...pageProps} />
+        </Container>
+      </SSRProvider>
     </div>
   );
 }
