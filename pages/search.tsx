@@ -27,7 +27,6 @@ const SearchNewsPage = () => {
 
         setSearchResults(articles);
       } catch (error) {
-        console.log(error);
         setSearchResultsLoadingIsError(true);
       } finally {
         setSearchResultsLoading(false);
@@ -44,7 +43,7 @@ const SearchNewsPage = () => {
         <strong>API routes</strong>
       </Alert>
       <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-3 controlId='search-input">
+        <Form.Group className="mb-3" controlId="search-input">
           <Form.Label>Search Query</Form.Label>
           <Form.Control
             name="searchQuery"

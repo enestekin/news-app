@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsArticleEntry Component renders correctly 1`] = `
+<a
+  data-testid="link-element"
+  href="https://testarticle.com"
+>
+  <div
+    class="h-100 card"
+  >
+    <img
+      alt="image"
+      class="card-img-top image"
+      data-nimg="1"
+      decoding="async"
+      height="200"
+      loading="lazy"
+      src="/_next/image?url=https%3A%2F%2Ftestimage.com&w=1080&q=75"
+      srcset="/_next/image?url=https%3A%2F%2Ftestimage.com&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Ftestimage.com&w=1080&q=75 2x"
+      style="color: transparent;"
+      width="500"
+    />
+    <div
+      class="card-body"
+    >
+      <div
+        class="card-title h5"
+      >
+        Test article
+      </div>
+      <p
+        class="card-text"
+      >
+        This is a test description
+      </p>
+    </div>
+  </div>
+</a>
+`;

@@ -18,7 +18,7 @@ const NewsArticleEntry: React.FC<NewsArticleEntryProps> = ({
       : undefined;
 
   return (
-    <a href={url}>
+    <a href={url} data-testid="link-element">
       <Card className="h-100">
         <Image
           src={validImageUrl || placeholderImage}

@@ -12,6 +12,10 @@ export default async function handler(
     return res.status(400).json({ error: "Please provide a search query" });
   }
 
+  if (!process.env.NEWS_API_KEY) {
+    return res.status(500).json({ error: "News API key is missing" });
+  }
+
   const response =
     await fetch(`https://newsapi.org/v2/everything?q=${searchQuery}&apiKey=${process.env.NEWS_API_KEY}
   `);
